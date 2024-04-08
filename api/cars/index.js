@@ -2,11 +2,11 @@
 module.exports = async function (context, req){
     const express = require('express');
     const app = express();
-    context.log("Cars");
     //console.log('Listening on 3000');
     app.use(express.json());
     
     const cars = require('./cars.json');
+    context.log(cars);
     
     //get all cars
     app.get('api/cars', (req, res) => {
