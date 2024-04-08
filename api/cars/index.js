@@ -1,6 +1,5 @@
 //create cars api using express
-console.log("Hello");
-module.exports = async function (context, req){
+
     const express = require('express');
     const app = express();
     //console.log('Listening on 3000');
@@ -54,4 +53,5 @@ module.exports = async function (context, req){
         console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net');
     });
 
-};
+    module.exports = app;
+
