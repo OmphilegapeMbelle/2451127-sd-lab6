@@ -1,4 +1,5 @@
 //create cars api using express
+console.log("Hello");
 module.exports = async function (context, req){
     const express = require('express');
     const app = express();
