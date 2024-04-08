@@ -1,10 +1,9 @@
 //create cars api using express
-const express = require('express');
-const app = express();
+const express = require('express')();
+const app = express;
 
-
-
-app.use(express.json());
+//console.log('Listening on 3000');
+//app.use(express.json());
 
 const cars = require('./cars.json');
 
@@ -16,8 +15,8 @@ app.get('/cars', (req, res) => {
 //get car by id
 app.get('/cars/:id', (req, res) => {
     const id = req.params.id;
-    const car = cars.find(car => car.id === id);
-    res.json(car);
+    const car = cars[req.params.id];
+    res.send(car);
 });
 
 //update car
@@ -26,7 +25,7 @@ app.put('/cars/:id', (req, res) => {
     const updatedCar = req.body;
     const index = cars.findIndex(car => car.id === id);
     cars[index] = updatedCar;
-    res.json(updatedCar);
+    res.send(updatedCar);
 });
 
 //delete car
@@ -39,7 +38,7 @@ app.delete('/cars/:id', (req, res) => {
 
 //add car
 app.post('/cars', (req, res) => {
-    console.log(req);
+
     const newCar = req.body;
     console.log(newCar);
     cars.push(newCar);
