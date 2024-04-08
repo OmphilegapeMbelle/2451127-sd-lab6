@@ -49,5 +49,5 @@ app.post('/cars', (req, res) => {
 
 //start app at localhost:3001
 app.listen(3000, () => {
-    console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net');
+    console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net/api');
 });
