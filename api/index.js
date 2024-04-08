@@ -8,7 +8,7 @@ app.use(express.json());
 const cars = require('./cars.json');
 
 //get all cars
-app.get('/cars', (req, res) => {
+app.get('api/cars', (req, res) => {
     res.send(cars);
 });
 
@@ -49,5 +49,5 @@ app.post('/cars', (req, res) => {
 
 //start app at localhost:3001
 app.listen(3000, () => {
-    console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net/api');
+    console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net');
 });
