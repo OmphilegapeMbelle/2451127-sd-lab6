@@ -8,6 +8,5 @@ module.exports = async function (context, req) {
         body: responseMessage
     };
 
-    const express = require('https://mango-desert-0addf3403.5.azurestaticapps.net/api/cars');
-    const app = express();
+    const cars = require('./cars.json');
 }
