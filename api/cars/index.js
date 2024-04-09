@@ -1,5 +1,4 @@
-module.exports = async function (){
-    const express = require('express');
+const express = require('express');
     const app = express();
     //console.log('Listening on 3000');
     app.use(express.json());
@@ -59,5 +58,3 @@ module.exports = async function (){
     app.listen(3000, () => {
         console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net');
     });
-};
-
