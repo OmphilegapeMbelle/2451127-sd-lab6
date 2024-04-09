@@ -10,17 +10,16 @@ module.exports = async function (context, req) {
 
     if (req.url === 'https://2992a9f0-a1b2-4df8-b9e6-19f659867cd2.azurewebsites.net/api/cars' && req.method === 'POST'){
         const newCar = req.body;
-        newCar.id = cars.length + 1;
-        cars.push(newCar);
-        responseMessage = cars;
-
-        context.res = {
-            // status: 200, /* Defaults to 200 */
-            body: responseMessage
-        };
+        /*newCar.id = cars.length + 1;
+        cars.push(newCar);*/
+        responseMessage = newCar;
+    
     }
 
-    
+    context.res = {
+        // status: 200, /* Defaults to 200 */
+        body: responseMessage
+    };
 
     
 }
