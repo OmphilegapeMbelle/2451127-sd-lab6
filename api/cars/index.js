@@ -8,8 +8,6 @@ module.exports = async function (context, req) {
     }
 
     if (req.url === 'https://2992a9f0-a1b2-4df8-b9e6-19f659867cd2.azurewebsites.net/api/cars/:id' && req.method === 'GET'){
-        const id = req.params.id;
-        const car = cars[req.params.id];
         const responseMessage = car;
     }
 
