@@ -1,26 +1,13 @@
 //create cars api using express
 module.exports = async function (context, req) {
-    try {
-        const { method, url, originalUrl, headers } = req;
+    const name = (req.query.name || (req.body && req.body.name));;
+    const responseMessage = req;
 
-        // Log the request details for debugging
-        context.log('Request Method:', method);
-        context.log('Request URL:', url);
-        context.log('Original URL:', originalUrl);
-        context.log('Request Headers:', headers);
+    context.res = {
+        // status: 200, /* Defaults to 200 */
+        body: responseMessage
+    };
 
-        // Make a GET request to the specified URL
-        const response = await axios.get(url);
-
-        context.res = {
-            status: response.status,
-            body: response.data
-        };
-    } catch (error) {
-        context.res = {
-            status: error.response.status || 500,
-            body: error.response.data || 'Internal Server Error'
-        };
-    }
-    
+    const express = require('https://mango-desert-0addf3403.5.azurestaticapps.net/api/cars');
+    const app = express();
 }
