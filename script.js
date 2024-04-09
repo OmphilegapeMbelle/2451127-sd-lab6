@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carList = document.getElementById('carList');
     cars = [];
     loadCarsBtn.addEventListener('click', () => {
-        fetch('./api/cars')
+        fetch('https://mango-desert-0addf3403.5.azurestaticapps.net/api/cars')
             .then(response => response.json())
             .then(data => {
                 cars = data;
