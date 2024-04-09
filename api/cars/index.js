@@ -9,11 +9,10 @@ module.exports = async function (context, req) {
     }
 
     if (req.url === 'https://2992a9f0-a1b2-4df8-b9e6-19f659867cd2.azurewebsites.net/api/cars' && req.method === 'POST'){
-        const id = req.params.id;
-        const updatedCar = req.body;
-        const index = cars.findIndex(car => car.id === id);
-        cars[req.params.id] = updatedCar;
-        responseMessage = updatedCar;
+        const newCar = req.body;
+        newCar.id = cars.length + 1;
+        cars.push(newCar);
+        responseMessage = newCar;
     }
 
     context.res = {
