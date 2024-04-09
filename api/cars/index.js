@@ -6,8 +6,9 @@ const app = express();
 app.use(express.json());
 
 module.exports = async function (context, req) {
+    const cars = require('./cars.json');
     const name = (req.query.name || (req.body && req.body.name));;
-    const responseMessage = req;
+    const responseMessage = cars;
 
     context.res = {
         // status: 200, /* Defaults to 200 */
@@ -15,5 +16,4 @@ module.exports = async function (context, req) {
     };
 
     
-    const cars = require('./cars.json');
 }
