@@ -8,5 +8,10 @@ module.exports = async function (context, req) {
         body: responseMessage
     };
 
+    const express = require('express');
+    const app = express();
+
+    //console.log('Listening on 3000');
+    app.use(express.json());
     const cars = require('./cars.json');
 }
