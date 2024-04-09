@@ -5,7 +5,7 @@
     app.use(express.json());
     
     const cars = require('./cars.json');
-    context.log(cars);
+
     
     //get all cars
     app.get('/api/cars', (req, res) => {
@@ -17,6 +17,10 @@
         const id = req.params.id;
         const car = cars[req.params.id];
         res.send(car);
+        context.res = {
+            // status: 200, /* Defaults to 200 */
+            body: res.send(car)
+        };
     });
     
     //update car
@@ -52,4 +56,5 @@
         console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net');
     });
 
+    module.exports = app;
     
