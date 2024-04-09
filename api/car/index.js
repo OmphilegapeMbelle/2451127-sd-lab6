@@ -6,7 +6,6 @@
     app.use(express.json());
     
     const cars = require('./cars.json');
-    context.log(cars);
     
     //get all cars
     module.exports = app.get('/cars', (req, res) => {
