@@ -8,7 +8,7 @@
     context.log(cars);
     
     //get all cars
-    app.get('api/cars', (req, res) => {
+    app.get('/api/cars', (req, res) => {
         res.send(cars);
     });
     
