@@ -15,8 +15,6 @@ module.exports = async function (context, req) {
         const responseMessage = cars;
     }*/
 
-    //responseMessage = cars;
-
     context.res = {
         // status: 200, /* Defaults to 200 */
         body: responseMessage
