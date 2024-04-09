@@ -8,7 +8,7 @@ module.exports = async function (context, req) {
         responseMessage = cars;
     }
 
-    if (req.url === 'https://2992a9f0-a1b2-4df8-b9e6-19f659867cd2.azurewebsites.net/api/cars' && req.method === 'PUT'){
+    if (req.url === 'https://2992a9f0-a1b2-4df8-b9e6-19f659867cd2.azurewebsites.net/api/cars' && req.method === 'POST'){
         const id = req.params.id;
         const updatedCar = req.body;
         const index = cars.findIndex(car => car.id === id);
