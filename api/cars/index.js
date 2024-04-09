@@ -8,11 +8,11 @@ module.exports = async function (){
 
     
     //get all cars
-    app.get('/api/cars', (req, res) => {
+    app.get('/cars', (req, res) => {
         res.send(cars);
     });
 
-    app.get('/api/cars', (req, res) => {
+    app.get('/cars', (req, res) => {
         res.send(cars);
     });
     
