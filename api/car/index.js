@@ -9,7 +9,7 @@
     context.log(cars);
     
     //get all cars
-    module.exports =app.get('/cars', (req, res) => {
+    module.exports = app.get('/cars', (req, res) => {
         res.send(cars);
     });
     
