@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carList = document.getElementById('carList');
     cars = [];
     loadCarsBtn.addEventListener('click', () => {
-        fetch('https://mango-desert-0addf3403.5.azurestaticapps.net/api/cars')
+        fetch('https://mango-desert-0addf3403.5.azurestaticapps.net/api/message')
             .then(response => response.json())
             .then(data => {
                 cars = data;
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 function addCar(newCar) {
-    fetch('https://mango-desert-0addf3403.5.azurestaticapps.net/api/cars', {
+    fetch('https://mango-desert-0addf3403.5.azurestaticapps.net/api/message', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
