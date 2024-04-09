@@ -12,7 +12,7 @@ module.exports = async function (context, req) {
         const newCar = req.body;
         newCar.id = cars.length + 1;
         cars.push(newCar);
-        responseMessage = newCar;
+        responseMessage = cars;
     }
 
     context.res = {
