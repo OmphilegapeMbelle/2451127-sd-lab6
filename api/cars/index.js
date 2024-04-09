@@ -8,7 +8,7 @@
 
     
     //get all cars
-    app.get('/api/cars', (req, res) => {
+    app.get('/cars', (req, res) => {
         res.send(cars);
     });
     

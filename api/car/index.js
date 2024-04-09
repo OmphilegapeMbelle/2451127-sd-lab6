@@ -9,7 +9,7 @@
     context.log(cars);
     
     //get all cars
-    app.get('api/cars', (req, res) => {
+    module.exports =app.get('/cars', (req, res) => {
         res.send(cars);
     });
     
@@ -53,5 +53,4 @@
         console.log('Server started at https://mango-desert-0addf3403.5.azurestaticapps.net');
     });
 
-    module.exports = app;
 
