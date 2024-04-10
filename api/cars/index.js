@@ -5,7 +5,7 @@ module.exports = async function (context, req) {
     let responseMessage;
 
     if (req.method === 'GET'){
-        responseMessage = cars;
+        responseMessage = req;
 
         context.res = {
             // status: 200, /* Defaults to 200 */
