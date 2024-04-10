@@ -15,7 +15,7 @@ module.exports = async function (context, req) {
 
     if (req.method === 'POST'){
         const newCar = req.body;
-        newCar.id = cars.length + 1;
+        newCar.id = cars.length;
         cars.push(newCar);
         responseMessage = cars;
 
