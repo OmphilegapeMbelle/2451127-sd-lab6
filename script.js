@@ -62,7 +62,7 @@ function removeCar(index) {
     const carId = cars[index].id;
     fetch(`https://mango-desert-0addf3403.5.azurestaticapps.net/api/cars`, { ///${carId}
         method: 'DELETE',
-        param: carId
+        param: index
     })
         .then(response => response.json())
         .then(data => {
