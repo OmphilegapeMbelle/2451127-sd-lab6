@@ -26,10 +26,11 @@ module.exports = async function (context, req) {
     }
 
     if (req.method === 'DELETE'){
-        const index = req.body;
-        cars.splice(index, 1);
+        const id = req.body;
+        const index = cars.findIndex(car => car.id === id);
+        cars.splice(index, 1); //splice by id not index
         
-        for (let i = 0;i<cars.length;i++){
+        /*for (let i = 0;i<cars.length;i++){
             if(cars[i].id==0){
                 continue;
             };
@@ -41,7 +42,7 @@ module.exports = async function (context, req) {
             if (cars[i].id<=index){
                 break;
             };
-        };
+        };*/
         responseMessage = cars;
         console.log(index);
 
