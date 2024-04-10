@@ -61,7 +61,8 @@ carForm.addEventListener('submit', event => {
 function removeCar(index) {
     const carId = cars[index].id;
     fetch(`https://mango-desert-0addf3403.5.azurestaticapps.net/api/cars`, { ///${carId}
-        method: 'DELETE'
+        method: 'DELETE',
+        param: carId
     })
         .then(response => response.json())
         .then(data => {
