@@ -43,6 +43,7 @@ module.exports = async function (context, req) {
             };
         };
         responseMessage = cars;
+        console.log(index);
 
         context.res = {
             // status: 200, /* Defaults to 200 */
