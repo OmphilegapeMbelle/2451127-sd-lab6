@@ -79,6 +79,7 @@ function removeCar(index) {
 carList.addEventListener('click', event => {
     if (event.target.classList.contains('btn-remove')) {
         const index = event.target.dataset.index;
+        console.log(index);
         removeCar(index);
     }
 });
