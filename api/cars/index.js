@@ -31,7 +31,7 @@ module.exports = async function (context, req) {
         
         for (let i = 0;i<cars.length;i++){
             if(cars[i].id==0){
-                break;
+                continue;
             };
             
             if (cars[i].id>index){
