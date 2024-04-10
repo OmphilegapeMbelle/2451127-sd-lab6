@@ -5,7 +5,7 @@ module.exports = async function (context, req) {
     let responseMessage;
 
     if (req.method === 'GET'){
-        responseMessage = cars;
+        responseMessage = req;
 
         context.res = {
             // status: 200, /* Defaults to 200 */
@@ -26,8 +26,8 @@ module.exports = async function (context, req) {
     }
 
     if (req.method === 'DELETE'){
-        
         responseMessage = req.params.id;
+
         context.res = {
             // status: 200, /* Defaults to 200 */
             body: responseMessage
