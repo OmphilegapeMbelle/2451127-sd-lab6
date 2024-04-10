@@ -26,7 +26,9 @@ module.exports = async function (context, req) {
     }
 
     if (req.method === 'DELETE'){
-        responseMessage = req.params;
+        const index = req.body;
+        cars.splice(index, 1);
+        responseMessage = cars;
 
         context.res = {
             // status: 200, /* Defaults to 200 */
