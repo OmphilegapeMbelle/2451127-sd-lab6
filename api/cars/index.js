@@ -28,6 +28,20 @@ module.exports = async function (context, req) {
     if (req.method === 'DELETE'){
         const index = req.body;
         cars.splice(index, 1);
+        
+        for (let i = 0;i<cars.length;i++){
+            if(cars[i].id==0){
+                break;
+            };
+            
+            if (cars[i].id>index){
+                cars[i].id = cars[i].id - 1;
+            };
+
+            if (cars[i].id<=index){
+                break;
+            };
+        };
         responseMessage = cars;
 
         context.res = {
