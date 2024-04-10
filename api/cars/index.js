@@ -26,7 +26,7 @@ module.exports = async function (context, req) {
     }
 
     if (req.method === 'DELETE'){
-        responseMessage = req.params;
+        responseMessage = req.param;
 
         context.res = {
             // status: 200, /* Defaults to 200 */
