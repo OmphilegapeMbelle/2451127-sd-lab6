@@ -28,7 +28,7 @@ module.exports = async function (context, req) {
     if (req.method === 'DELETE'){
         const id = req.body;
         const index = cars.findIndex(car => car.id === id);
-        cars.splice(index, 1); //splice by id not index
+        cars.splice(index, 1); //splice by id not inde
         
         /*for (let i = 0;i<cars.length;i++){
             if(cars[i].id==0){
