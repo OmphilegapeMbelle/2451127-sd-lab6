@@ -29,7 +29,7 @@ module.exports = async function (context, req) {
         const index = req.body;
         cars.splice(index, 1);
         
-        for (let i = 0;i<cars.length+1;i++){
+        for (let i = 0;i<cars.length;i++){
             if(cars[i].id==0){
                 continue;
             };
